@@ -17,6 +17,10 @@ router.route('/:id').get((req, res) => {
     .catch((err) => handleError(err, res));
 });
 
+/*
+Route not used in application. Made it to demonstrate server side search/filtering 
+Would need type/error checking and method to ensure against regex attacks to be prod ready
+*/
 router.route('/search/:title').get((req, res) => {
   const title = req.params.title;
   console.log(title);
